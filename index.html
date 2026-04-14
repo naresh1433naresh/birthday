@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface": "#352e1c",
+            "surface-container-high": "#f0e1c1",
+            "on-tertiary-container": "#584565",
+            "on-secondary-container": "#5f4200",
+            "on-error": "#ffefec",
+            "inverse-on-surface": "#a79c84",
+            "on-error-container": "#520c00",
+            "primary-container": "#f9a9ac",
+            "primary-dim": "#793e41",
+            "on-secondary": "#fff1de",
+            "secondary": "#795500",
+            "primary-fixed-dim": "#ea9c9f",
+            "surface-tint": "#88494d",
+            "surface-container": "#f5e7c8",
+            "outline-variant": "#b7ac94",
+            "inverse-surface": "#130e02",
+            "on-secondary-fixed": "#473000",
+            "primary": "#88494d",
+            "surface-container-low": "#fdefd2",
+            "error-dim": "#b92902",
+            "on-tertiary-fixed-variant": "#624f6f",
+            "tertiary-fixed-dim": "#dcc3ea",
+            "on-primary-fixed-variant": "#6b3236",
+            "surface": "#fff5e5",
+            "background": "#fff5e5",
+            "on-surface-variant": "#635b46",
+            "on-tertiary-fixed": "#453351",
+            "outline": "#7f7660",
+            "surface-container-highest": "#ebdcb9",
+            "tertiary-container": "#ebd1f8",
+            "on-tertiary": "#fceeff",
+            "tertiary-fixed": "#ebd1f8",
+            "tertiary-dim": "#5b4868",
+            "on-primary": "#ffefef",
+            "primary-fixed": "#f9a9ac",
+            "secondary-dim": "#6a4a00",
+            "secondary-fixed-dim": "#ffb702",
+            "tertiary": "#685475",
+            "secondary-container": "#ffc967",
+            "on-primary-container": "#60292d",
+            "error-container": "#f95630",
+            "inverse-primary": "#f9a9ac",
+            "secondary-fixed": "#ffc967",
+            "surface-bright": "#fff5e5",
+            "error": "#b02500",
+            "on-primary-fixed": "#45151a",
+            "on-secondary-fixed-variant": "#6b4b00",
+            "on-background": "#352e1c",
+            "surface-dim": "#e3d3af",
+            "surface-container-lowest": "#ffffff",
+            "surface-variant": "#ebdcb9"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline": ["Noto Serif"],
+            "body": ["Plus Jakarta Sans"],
+            "label": ["Plus Jakarta Sans"]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .memory-stack-rotate-left {
+      transform: rotate(-2deg);
+    }
+
+    .memory-stack-rotate-right {
+      transform: rotate(2deg);
+    }
+
+    .glass-nav {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  </style>
+  <style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+  <!-- TopAppBar -->
+  <header
+    class="fixed top-0 w-full z-50 bg-[#fff5e5]/80 backdrop-blur-md dark:bg-stone-900/80 shadow-sm dark:shadow-none">
+    <div class="flex justify-between items-center max-w-5xl mx-auto px-6 py-4">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-[#88494d] dark:text-[#f9a9ac]"
+          data-icon="auto_stories">auto_stories</span>
+        <h1 class="font-serif italic text-2xl text-[#88494d] dark:text-[#f9a9ac]">Hey Shivi</h1>
+      </div>
+      <nav class="hidden md:flex gap-8">
+        <a class="text-[#88494d] dark:text-[#f9a9ac] font-semibold hover:text-[#88494d] transition-colors duration-300"
+          href="#timeline">Timeline</a>
+        <a class="text-stone-500 dark:text-stone-400 hover:text-[#88494d] transition-colors duration-300"
+          href="#gallery">Gallery</a>
+        <a class="text-stone-500 dark:text-stone-400 hover:text-[#88494d] transition-colors duration-300"
+          href="#note">Our Bond</a>
+      </nav>
+      <div class="flex items-center">
+        <span class="material-symbols-outlined text-[#88494d] dark:text-[#f9a9ac] scale-95 active:duration-75"
+          data-icon="favorite">favorite</span>
+      </div>
+    </div>
+  </header>
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative min-h-[707px] flex items-center justify-center overflow-hidden px-6">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary-container/20 -z-10"></div>
+      <div class="max-w-4xl text-center space-y-8">
+        <span class="font-label text-secondary uppercase tracking-[0.3em] text-sm font-semibold">EST. 2015</span>
+        <h2 class="font-headline text-5xl md:text-7xl lg:text-8xl text-on-surface leading-tight tracking-tight">
+          Happy Birthday to My <br />
+          <span class="italic text-primary">My Personal Therapist (free wala 😜)</span>
+        </h2>
+        <p class="font-body text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+          A celebration of ten years of laughter, secrets, and a bond that only gets more beautiful with time.
+        </p>
+        <div class="pt-6">
+          <a class="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary-dim transition-all shadow-lg shadow-primary/20"
+            href="#note">
+            Read My Note
+            <span class="material-symbols-outlined text-sm" data-icon="arrow_downward">arrow_downward</span>
+          </a>
+        </div>
+      </div>
+      <!-- Decorative Ornaments -->
+      <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-secondary-container/30 rounded-full blur-3xl"></div>
+      <div class="absolute -top-12 -right-12 w-64 h-64 bg-primary-container/30 rounded-full blur-3xl"></div>
+    </section>
+    <!-- Our Journey (Timeline) -->
+    <section class="py-24 px-6 bg-surface-container-low" id="timeline">
+      <div class="max-w-5xl mx-auto">
+        <div class="mb-16 text-center md:text-left">
+          <h2 class="font-headline text-4xl text-on-surface mb-4">Our Journey</h2>
+          <div class="h-1 w-24 bg-secondary/30 rounded-full mx-auto md:mx-0"></div>
+        </div>
+        <div class="space-y-12 md:space-y-0 md:grid md:grid-cols-3 md:gap-12">
+          <!-- 2015 -->
+          <div class="relative p-8 bg-surface-container-lowest rounded-lg border-l-4 border-primary">
+            <span class="font-headline text-primary text-3xl font-bold block mb-4">2015</span>
+            <h3 class="font-body text-on-surface font-semibold text-lg mb-2">Where it all began</h3>
+            <p class="font-body text-on-surface-variant text-sm">4th Grade. The innocent ones .jab tu dekhti thi mere
+              baalon se oil tapakta tha </p>
+          </div>
+          <!-- 10th Grade -->
+          <div class="relative p-8 bg-surface-container-lowest rounded-lg border-l-4 border-secondary translate-y-8">
+            <span class="font-headline text-secondary text-3xl font-bold block mb-4">10th Grade</span>
+            <h3 class="font-body text-on-surface font-semibold text-lg mb-2">The bond grew stronger</h3>
+            <p class="font-body text-on-surface-variant text-sm">Through exams and late-night calls, we became
+              inseparable. The anchor in every storm. #bestbuddy</p>
+          </div>
+          <!-- Today -->
+          <div class="relative p-8 bg-surface-container-lowest rounded-lg border-l-4 border-primary-dim translate-y-16">
+            <span class="font-headline text-primary-dim text-3xl font-bold block mb-4">Today</span>
+            <h3 class="font-body text-on-surface font-semibold text-lg mb-2">Still going strong</h3>
+            <p class="font-body text-on-surface-variant text-sm">kbhi v piche mud k dekhna m hameha tere saath khada
+              rahunga </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Memories (Gallery) -->
+    <section class="py-16 md:py-32 px-4 md:px-6" id="gallery">
+      <div class="max-w-6xl mx-auto">
+
+        <!-- Section header -->
+        <div class="flex flex-col items-center mb-10">
+          <div class="flex gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center">
+              <span class="material-symbols-outlined text-secondary" data-icon="photo_camera">photo_camera</span>
+            </div>
+            <div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center">
+              <span class="material-symbols-outlined text-secondary" data-icon="auto_awesome">auto_awesome</span>
+            </div>
+          </div>
+          <h2 class="font-headline text-3xl md:text-4xl text-on-surface">Memories</h2>
+          <div class="h-1 w-16 bg-secondary/30 rounded-full mt-3"></div>
+        </div>
+
+        <!-- Mobile: stacked cards (single column) -->
+        <div class="flex flex-col gap-6 md:hidden">
+          <div
+            class="memory-stack-rotate-left bg-surface-container-lowest p-3 rounded-lg shadow-xl shadow-on-surface/5">
+            <img alt="Best friend in a beautiful blue traditional dress" class="rounded w-full object-contain"
+              src="https://lh3.googleusercontent.com/aida/ADBb0ugrVk0OYYxw26JXScx35ZHBErCRUpU55ein9nI1Fnosp00GPC24cBLGYjbBZ6wv4GBYJAjyN245GF-AueT5qK9uXmXpyp9XIVfGD-o61EGOFzD9RGUKmImHhBibnPD-eC7znBtpEf0eJnOJylq7iGd03P7l_4kSBIKzexh6QzFpm2nkCzR0vJGIWOkGRmgnTMS2Yk4ub58JMRbsby1oPDPl3cHnMbnran3hR-6Dxs9YX0WLBByR9-QzklZZxm7KlFKr89K4ny8" />
+            <p class="font-headline italic text-center mt-3 text-on-surface-variant text-sm">Summer '18</p>
+          </div>
+          <div
+            class="memory-stack-rotate-right bg-surface-container-lowest p-3 rounded-lg shadow-xl shadow-on-surface/5">
+            <img alt="A stylish moment outside the mall" class="rounded w-full object-contain"
+              src="https://lh3.googleusercontent.com/aida/ADBb0ujS9rmpHqJ03r5ToezEfaW2i7tCy4INErYcoIr53fDDUQHJYKzwPI-EsnVb7udzJ2qT3IVOaWfRrgX7naBjDPzNt1T2rI5vfUKU_Ni86-YXM8tTwwUP0isFUt31FCmqo537KFsn3rlfXvY3JINmF5DMs3eCa2UGMQBoNtkmsxAYZRjm8281cBJdd-8kxCSQ-jjlgw2NcGHHz6yDP3PFDS7PmtnIPoZNbUCSLWy3yd-KHYTOUHYD8old-vuUdNYAro8mnUjXDBO2" />
+            <p class="font-headline italic text-center mt-3 text-on-surface-variant text-sm">The Big Day</p>
+          </div>
+          <div
+            class="memory-stack-rotate-left bg-surface-container-lowest p-4 rounded-lg shadow-xl shadow-on-surface/5">
+            <img alt="Fun times at the arcade" class="rounded w-full object-contain"
+              src="https://lh3.googleusercontent.com/aida/ADBb0uib5ZRy0Q31z4OLZvnt9Z-yIMIRT0W2H4FiqMhm4lFVUIuy2vmTplMJ3ksJh53mT4ZR0syqeTdbLuzctWf3Q-TUrecr5jeJaHPkFnSKWjj_HqBo4m1GHNcJjYsrMLcfsk8FuIMids5djhwAWBKphGCutTCYwPKA2GzxCsdsZBzRL54w0kmLqt_w7Cej6bjqWNXV_885ZTZlv3UgD_5fyQwKLoYgHfxA1AwAvtjGB5QoamgQJ4Klt1Q16hrRxYVcOIU2HjCLREO-" />
+            <p class="font-headline italic text-center mt-3 text-on-surface-variant text-sm">Always Together</p>
+          </div>
+          <div
+            class="memory-stack-rotate-right bg-surface-container-lowest p-3 rounded-lg shadow-xl shadow-on-surface/5">
+            <img alt="A cherished memory" class="rounded w-full object-contain" src="images/IMG-20211006-WA0002.jpg" />
+            <p class="font-headline italic text-center mt-3 text-on-surface-variant text-sm">Mine fav ✨</p>
+          </div>
+          <div
+            class="memory-stack-rotate-left bg-gradient-to-br from-primary-container/40 to-surface-container-lowest border border-primary/20 p-3 rounded-lg shadow-xl shadow-primary/10">
+            <img alt="Us - anime style" class="rounded w-full object-contain" src="images/ImgCreator.ai .png" />
+            <p class="font-headline italic text-center mt-3 text-primary text-sm">Us 💫</p>
+          </div>
+          <div
+            class="memory-stack-rotate-right bg-surface-container-lowest p-3 rounded-lg shadow-xl shadow-on-surface/5">
+            <img alt="A beautiful memory together" class="rounded w-full object-contain"
+              src="images/WhatsApp Image 2026-04-15 at 3.42.52 AM.jpeg" />
+            <p class="font-headline italic text-center mt-3 text-on-surface-variant text-sm">Together 🌸</p>
+          </div>
+          <div
+            class="memory-stack-rotate-left bg-surface-container-lowest p-3 rounded-lg shadow-xl shadow-on-surface/5">
+            <img alt="Another precious moment" class="rounded w-full object-contain"
+              src="images/WhatsApp Image 2026-04-15 at 3.42.53 AM.jpeg" />
+            <p class="font-headline italic text-center mt-3 text-on-surface-variant text-sm">Always 💕</p>
+          </div>
+        </div>
+
+        <!-- Desktop: 3-column masonry Polaroid grid -->
+        <div class="hidden md:grid md:grid-cols-3 gap-6 items-start mt-4">
+          <!-- Column 1 -->
+          <div class="flex flex-col gap-6">
+            <div
+              class="memory-stack-rotate-left bg-surface-container-lowest p-3 rounded-lg shadow-xl shadow-on-surface/5">
+              <img alt="Best friend in a blue traditional dress" class="rounded w-full object-contain"
+                src="https://lh3.googleusercontent.com/aida/ADBb0ugrVk0OYYxw26JXScx35ZHBErCRUpU55ein9nI1Fnosp00GPC24cBLGYjbBZ6wv4GBYJAjyN245GF-AueT5qK9uXmXpyp9XIVfGD-o61EGOFzD9RGUKmImHhBibnPD-eC7znBtpEf0eJnOJylq7iGd03P7l_4kSBIKzexh6QzFpm2nkCzR0vJGIWOkGRmgnTMS2Yk4ub58JMRbsby1oPDPl3cHnMbnran3hR-6Dxs9YX0WLBByR9-QzklZZxm7KlFKr89K4ny8" />
+              <p class="font-headline italic text-center mt-3 text-on-surface-variant text-sm">Mine fav pic of yrs :)</p>
+            </div>
+            <div
+              class="memory-stack-rotate-right bg-surface-container-lowest p-3 rounded-lg shadow-xl shadow-on-surface/5">
+              <img alt="A stylish moment outside the mall" class="rounded w-full object-contain"
+                src="https://lh3.googleusercontent.com/aida/ADBb0ujS9rmpHqJ03r5ToezEfaW2i7tCy4INErYcoIr53fDDUQHJYKzwPI-EsnVb7udzJ2qT3IVOaWfRrgX7naBjDPzNt1T2rI5vfUKU_Ni86-YXM8tTwwUP0isFUt31FCmqo537KFsn3rlfXvY3JINmF5DMs3eCa2UGMQBoNtkmsxAYZRjm8281cBJdd-8kxCSQ-jjlgw2NcGHHz6yDP3PFDS7PmtnIPoZNbUCSLWy3yd-KHYTOUHYD8old-vuUdNYAro8mnUjXDBO2" />
+              <p class="font-headline italic text-center mt-3 text-on-surface-variant text-sm">:)</p>
+            </div>
+          </div>
+          <!-- Column 2 (offset down for stagger) -->
+          <div class="flex flex-col gap-6 mt-10">
+            <div
+              class="memory-stack-rotate-left bg-surface-container-lowest p-4 rounded-lg shadow-xl shadow-on-surface/5">
+              <img alt="Fun times at the arcade" class="rounded w-full object-contain"
+                src="https://lh3.googleusercontent.com/aida/ADBb0uib5ZRy0Q31z4OLZvnt9Z-yIMIRT0W2H4FiqMhm4lFVUIuy2vmTplMJ3ksJh53mT4ZR0syqeTdbLuzctWf3Q-TUrecr5jeJaHPkFnSKWjj_HqBo4m1GHNcJjYsrMLcfsk8FuIMids5djhwAWBKphGCutTCYwPKA2GzxCsdsZBzRL54w0kmLqt_w7Cej6bjqWNXV_885ZTZlv3UgD_5fyQwKLoYgHfxA1AwAvtjGB5QoamgQJ4Klt1Q16hrRxYVcOIU2HjCLREO-" />
+              <p class="font-headline italic text-center mt-3 text-on-surface-variant text-sm">he he beautiful lady:)</p>
+            </div>
+            <div
+              class="memory-stack-rotate-right bg-surface-container-lowest p-3 rounded-lg shadow-xl shadow-on-surface/5">
+              <img alt="A cherished memory" class="rounded w-full object-contain"
+                src="images/IMG-20211006-WA0002.jpg" />
+              <p class="font-headline italic text-center mt-3 text-on-surface-variant text-sm"> bs  yaadein thi ✨</p>
+            </div>
+          </div>
+          <!-- Column 3 -->
+          <div class="flex flex-col gap-6 mt-4">
+            <div
+              class="memory-stack-rotate-left bg-gradient-to-br from-primary-container/40 to-surface-container-lowest border border-primary/20 p-3 rounded-lg shadow-xl shadow-primary/10">
+              <img alt="Us - anime style" class="rounded w-full object-contain" src="images/ImgCreator.ai .png" />
+              <p class="font-headline italic text-center mt-3 text-primary text-sm">Yaad h ?</p>
+            </div>
+            <div
+              class="memory-stack-rotate-right bg-surface-container-lowest p-3 rounded-lg shadow-xl shadow-on-surface/5">
+              <img alt="A beautiful memory together" class="rounded w-full object-contain"
+                src="images/WhatsApp Image 2026-04-15 at 3.42.52 AM.jpeg" />
+              <p class="font-headline italic text-center mt-3 text-on-surface-variant text-sm">Bht daata tha bhyii🌸</p>
+            </div>
+            <div
+              class="memory-stack-rotate-left bg-surface-container-lowest p-3 rounded-lg shadow-xl shadow-on-surface/5">
+              <img alt="Another precious moment" class="rounded w-full object-contain"
+                src="images/WhatsApp Image 2026-04-15 at 3.42.53 AM.jpeg" />
+              <p class="font-headline italic text-center mt-3 text-on-surface-variant text-sm">Yaad aaya💕</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- A Heartfelt Note -->
+    <section class="py-24 px-6" id="note">
+      <div class="max-w-3xl mx-auto bg-surface-container rounded-xl p-10 md:p-20 text-center relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-4 opacity-10">
+          <span class="material-symbols-outlined text-9xl" data-icon="format_quote">format_quote</span>
+        </div>
+        <h2 class="font-headline text-4xl text-primary mb-10">To My Dearest Friend</h2>
+        <div class="space-y-6 font-body text-xl md:text-2xl text-on-surface leading-relaxed italic">
+          <p>"Happy Birthday to the one who listens to all my endless bak bak without ever getting tired 🥺💖
+
+You’re not just my favorite person, you’re my comfort, my safe place, and my personal diary who never complains 😄✨
+Thank you for always being there, for understanding me even when I don’t make sense, and for making everything feel lighter just by listening.
+
+I hope your day is filled with as much happiness as you bring into my life. You truly deserve all the love, laughter, and beautiful moments in the world 💫
+
+Stay the same amazing, patient, and kind person that you are… because honestly, I don’t know what I’d do without you 🫶
+
+Happy Birthday once again 🎂💖"</p>
+          <p>"You're the most supportive and special person in my life."</p>
+          <p>"Thank you for being you."</p>
+          <p>"from ur berozgar engineer :)"</p>
+        </div>
+        <div class="mt-12 flex justify-center items-center gap-4">
+          <div class="h-px w-12 bg-outline-variant"></div>
+          <span class="font-headline italic text-primary text-xl">Forever Yours</span>
+          <div class="h-px w-12 bg-outline-variant"></div>
+        </div>
+        <div class="mt-12">
+          <span class="material-symbols-outlined text-primary text-5xl animate-pulse" data-icon="favorite"
+            style="font-variation-settings: 'FILL' 1;">favorite</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="w-full py-12 border-t border-stone-200/20 bg-[#fff5e5] dark:bg-stone-900">
+    <div class="flex flex-col items-center gap-6 w-full max-w-5xl mx-auto px-6">
+      <nav class="flex gap-8">
+        <a class="font-sans text-sm tracking-wide uppercase text-[#88494d] underline underline-offset-8 transition-all hover:text-[#795500] dark:hover:text-amber-200 opacity-80 hover:opacity-100"
+          href="#timeline">Timeline</a>
+        <a class="font-sans text-sm tracking-wide uppercase text-stone-400 dark:text-stone-500 transition-all hover:text-[#795500] dark:hover:text-amber-200 opacity-80 hover:opacity-100"
+          href="#gallery">Gallery</a>
+        <a class="font-sans text-sm tracking-wide uppercase text-stone-400 dark:text-stone-500 transition-all hover:text-[#795500] dark:hover:text-amber-200 opacity-80 hover:opacity-100"
+          href="#note">Our Bond</a>
+      </nav>
+      <div class="h-px w-full bg-stone-200/10"></div>
+      <p class="font-sans text-sm tracking-wide uppercase text-stone-400 dark:text-stone-500 text-center">
+        Made with love for my best friend since 2015
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
